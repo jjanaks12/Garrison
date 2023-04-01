@@ -1,0 +1,36 @@
+.user {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+
+    &__image {
+        @include size(60px);
+        text-transform: uppercase;
+        margin: 0 auto 15px;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        overflow: hidden;
+
+        img {
+            @include size(100%);
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
+
+    &__detail {
+        em {
+            opacity: 0.4;
+            font-style: normal;
+            display: block;
+        }
+
+        .btn__logout {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 70%;
+        }
+    }
+}

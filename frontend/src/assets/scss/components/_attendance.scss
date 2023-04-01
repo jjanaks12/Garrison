@@ -1,0 +1,42 @@
+.attendance {
+    &__widget {
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        padding: 30px 10px;
+        border-radius: 10px;
+        border: 1px dashed rgba($charcoal-black, 0.1);
+
+        &__title {
+            display: block;
+        }
+
+        &__btn {
+            background: $primary;
+            color: $white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding: 10px;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.timer {
+    $self: &;
+    font-weight: 700;
+
+    &__unit {
+        + #{$self}__unit {
+            margin-left: 5px;
+        }
+
+        span {
+            width: 25px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}

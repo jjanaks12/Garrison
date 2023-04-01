@@ -1,0 +1,39 @@
+.pagination {
+    $self: &;
+
+    &__list {
+        @extend %listreset;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+        }
+
+        a,
+        strong {
+            @include size(40px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+        }
+
+        a {
+            @include animate(background color);
+            background: $primary;
+            color: $white;
+
+            &:hover {
+                background: rgba($primary, 0.2);
+                color: $primary;
+            }
+        }
+    }
+
+    & &--btn {
+        width: auto;
+        padding: 0  20px;
+    }
+}

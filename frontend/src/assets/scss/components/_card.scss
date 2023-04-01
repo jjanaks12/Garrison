@@ -1,0 +1,68 @@
+.card {
+    background: $milky-white;
+    box-shadow: 0 0 20px rgba($charcoal-black, 0.1);
+    position: relative;
+
+    &__header {
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        border-bottom: 1px solid rgba($black, 0.1);
+        position: sticky;
+        z-index: 1;
+        top: 0;
+
+        &--fixed {
+            border-radius: 0;
+        }
+
+        &__action {
+            font-size: 80%;
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            a {
+                @extend .btn__link;
+                vertical-align: middle;
+
+                +a {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+
+    &__detail {
+        padding: 40px;
+
+        .message {
+            background: rgba($black, 0.1);
+            color: $black;
+            font-size: 80%;
+            padding: 15px 25px;
+            border-radius: 40px;
+
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .form {
+            &:not(&:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__footer {
+        padding: 20px 0;
+        border-top: 1px solid rgba($black, 0.1);
+    }
+}

@@ -1,0 +1,79 @@
+.btn {
+    @include animate(background color border-color);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+
+    &__link {
+        @include animate(color border-color);
+        background: none;
+        color: $primary;
+        font-weight: 700;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        border-width: 0 0 2px;
+        border-style: dashed;
+        border-color: $primary;
+        cursor: pointer;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            color: $secondary;
+            border-color: $secondary;
+        }
+
+        &.loading::before {
+            border-color: $primary transparent;
+            position: absolute;
+            right: 100%;
+        }
+    }
+
+    &__primary {
+        background: $primary;
+        color: $milky-white;
+
+        &:hover,
+        &:focus {
+            background: rgba($primary, 0.2);
+            color: $primary;
+        }
+    }
+
+    &__info {
+        background: $info;
+        color: $milky-white;
+
+        &:hover,
+        &:focus {
+            background: rgba($info, 0.2);
+            color: $info;
+        }
+
+        &.loading::before {
+            border-color: $info transparent;
+        }
+    }
+
+    &__xs {
+        font-size: 70%;
+        padding: 5px 10px;
+    }
+
+    &:disabled {
+        background: rgba($black, 0.2);
+        color: $black;
+        pointer-events: none;
+    }
+}

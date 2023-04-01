@@ -1,0 +1,37 @@
+.account {
+    &__section {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        white-space: nowrap;
+
+        &::after {
+            content: '';
+            width: 1px;
+            min-height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__header {
+        padding: 0 40px;
+    }
+
+    &__holder {
+        width: 100%;
+        max-width: 480px;
+        white-space: normal;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__body {
+        .form {
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba($black, 0.1);
+            margin-bottom: 50px;
+        }
+    }
+}

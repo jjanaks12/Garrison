@@ -1,0 +1,30 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgba($black, 0.2);
+
+    tr {
+        border-bottom: 1px solid rgba($black, 0.2);
+    }
+
+    th,
+    td {
+        padding: 5px 10px;
+        border-right: 1px solid rgba($black, 0.2);
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &--sm {
+        font-size: 75%;
+
+        th,
+        td {
+            padding: 2px 5px;
+        }
+    }
+}

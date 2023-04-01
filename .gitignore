@@ -1,0 +1,9 @@
+*-dup.*
+
+node_modules
+vendors
+.env
+
+package-lock.json
+composer.lock
+.DS_Store
